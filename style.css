@@ -1,0 +1,158 @@
+/* تنسيقات CSS العامة */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4e1f4; /* خلفية وردية فاتحة */
+    color: #333; /* نص بلون غامق لسهولة القراءة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  /* الشعار - spy.png خارج إطار الهاتف */
+  .logo-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10; /* التأكد من أن الشعار فوق جميع العناصر */
+  }
+  
+  .logo {
+    width: 80px;  /* عرض الشعار */
+    height: auto;  /* الحفاظ على نسبة العرض والارتفاع */
+  }
+  
+  /* إطار الهاتف */
+  .phone-container {
+    width: 414px;  /* العرض الطبيعي للهاتف */
+    height: 896px; /* الارتفاع الطبيعي للهاتف */
+    background-color: #fff; /* داخل الهاتف خلفية بيضاء */
+    border-radius: 35px; /* زوايا مدورة بشكل أكثر أناقة */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* تأثير الظل لتحسين المظهر */
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+  }
+  
+  /* محتوى الهاتف */
+  .content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* عنوان الصفحة */
+  .title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; /* لون النص داكن */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* تأثير الظل الناعم */
+  }
+  
+  /* وصف المهمة */
+  .description {
+    font-size: 1.2em;
+    color: #666; /* لون النص خفيف */
+    margin-bottom: 30px;
+    max-width: 80%;
+    padding: 0 20px;
+    line-height: 1.5;
+  }
+  
+  /* زر بدء المهمة */
+  .start-button {
+    background-color: #ff5f5f;  /* لون الزر الأحمر */
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .start-button:hover {
+    background-color: #ff3838;  /* تغيير اللون عند التمرير */
+  }
+  
+  /* تصميم النافذة المنبثقة */
+  .popup {
+    display: none;  /* إخفاء النافذة بشكل افتراضي */
+    position: fixed;
+    top: 50%;  /* جعل النافذة تبدأ في منتصف الشاشة من الأعلى */
+    left: 50%;  /* جعل النافذة تبدأ في منتصف الشاشة من اليسار */
+    transform: translate(-50%, -50%);  /* تحريك النافذة لتكون في المنتصف تمامًا */
+    width: 80%;
+    max-width: 400px;  /* تحديد الحد الأقصى للعرض */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 100; /* التأكد من أن النافذة تظهر فوق جميع العناصر */
+  }
+  
+  .popup-content {
+    text-align: center;
+  }
+  
+  .mission-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .david-image {
+    width: 80px;  /* عرض الصورة */
+    height: 80px; /* ارتفاع الصورة */
+    border-radius: 50%; /* دائرية الصورة */
+    margin-bottom: 20px;
+  }
+  
+  .popup-buttons {
+    margin-top: 20px;
+  }
+  
+  .popup-buttons button {
+    background-color: #ff5f5f;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .popup-buttons button:hover {
+    background-color: #ff3838;
+  }
+  
+  /* تصميم متجاوب للهواتف */
+  @media (max-width: 600px) {
+    .logo {
+      width: 60px;  /* تصغير الشعار في الهواتف الصغيرة */
+    }
+    .title {
+      font-size: 1.6em;
+    }
+    .description {
+      font-size: 1em;
+    }
+    .start-button {
+      width: 80%;
+      padding: 12px 25px;
+      font-size: 1.1em;
+    }
+  }
+  

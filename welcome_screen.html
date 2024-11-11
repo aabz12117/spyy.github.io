@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مهمة الجاسوس</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- الشعار خارج الإطار الهاتف -->
+  <div class="logo-container">
+    <img src="spy.png" alt="شعار الجاسوس" class="logo">
+  </div>
+
+  <!-- إطار الهاتف مع المحتوى -->
+  <div class="phone-container">
+    <div class="content">
+      <h1 class="title">مهمة الجاسوس!</h1>
+      <p class="description">مرحبًا بك في مهمة الجاسوس. اضغط على زر "ابدأ المهمة" لبدء مغامرتك.</p>
+      <button class="start-button" onclick="openPopup()">ابدأ المهمة</button>
+    </div>
+  </div>
+
+  <!-- نافذة منبثقة للموافقة -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>تفاصيل المهمة</h2>
+      <p>أنت الآن في مهمة حساسة للغاية. هدفك هو اختراق هاتف شخص يدعى <strong>ديفيد</strong> واستخراج المعلومات السرية.</p>
+      <p>ديفيد هو موظف في وكالة حكومية ويحتفظ ببيانات حساسة على هاتفه الشخصي. مهمتك هي أن تجد طريقة للوصول إلى هذه البيانات. نحن نعلم أن ديفيد يستخدم جهاز موبايل بنظام أندرويد.</p>
+      <div class="popup-img">
+        <img src="david.jpg" alt="ديفيد" class="david-image">
+
+      </div>
+      <p>هل أنت مستعد لتخوض هذه المهمة؟ إذا كنت موافقًا، اضغط على "موافق" للبدء. إذا كنت غير مستعد، اضغط "لا" للإلغاء.</p>
+      <div class="popup-buttons">
+        <button class="btn-approve" onclick="startMission()">موافق</button>
+        <button class="btn-cancel" onclick="closePopup()">لا</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // دالة لفتح النافذة المنبثقة
+    function openPopup() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    // دالة لإغلاق النافذة المنبثقة
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    // دالة لبدء المهمة عند الضغط على "موافق"
+    function startMission() {
+      window.location.href = "mission_page.html"; // الانتقال إلى صفحة المهمة
+    }
+  </script>
+</body>
+</html>

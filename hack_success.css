@@ -1,0 +1,250 @@
+/* إعدادات عامة للصفحة */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* لون خلفية ناعم وجميل */
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    direction: rtl; /* الكتابة من اليمين لليسار */
+}
+
+/* تنسيق الحاوية الرئيسية */
+.container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* تنسيق الصورة */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid #3498db;
+    object-fit: cover;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* تأثير الظل للصورة */
+}
+
+/* وضع الصورة داخل الحاوية */
+.profile-image {
+    margin-bottom: 30px;
+}
+
+/* تنسيق العناوين */
+h1, h2 {
+    color: #34495e;
+    font-size: 24px; /* تصغير حجم العناوين لتناسب الهاتف */
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px; /* إضافة تباعد بين الحروف */
+}
+
+/* تنسيق التفاصيل */
+.details p, .family p, .background-story p, .contact-info p {
+    font-size: 16px; /* تقليل الحجم لتناسب الهاتف */
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* تنسيق العناوين الداخلية */
+.details h2, .family h2, .background-story h2, .contact-info h2 {
+    color: #1abc9c;
+    font-size: 18px; /* تعديل الحجم ليكون مناسبًا على الهاتف */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase; /* تحويل النصوص إلى حروف كبيرة */
+}
+
+/* تحسين الشكل العام للجملة النهائية */
+.final-message {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px; /* تقليل حجم الخط */
+    color: #27ae60;
+}
+
+.final-message p {
+    font-weight: bold;
+    font-size: 20px;
+    color: #2ecc71;
+}
+
+/* تأثيرات الزر */
+button {
+    background-color: #2980b9;
+    color: white;
+    padding: 12px 22px; /* تقليل حجم الزر */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #3498db;
+    transform: translateY(-3px); /* تأثير رفع عند التمرير */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* تنسيق الأقسام الداخلية */
+.family, .background-story, .contact-info {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* تحسين شكل النصوص الخاصة بالعائلة */
+.family p, .background-story p, .contact-info p {
+    color: #7f8c8d;
+    font-size: 14px; /* تقليل حجم النص ليكون أكثر ملاءمة للهاتف */
+    line-height: 1.7;
+}
+
+/* تأثير عند التمرير فوق الروابط */
+a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+/* تنسيق للأيقونات داخل النصوص */
+.icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* جعل النصوص بشكل جيد للقائمة العائلية */
+.family ul {
+    text-align: right;
+    list-style-type: none;
+    padding: 0;
+}
+
+.family ul li {
+    padding: 8px;
+    font-size: 16px; /* تقليل حجم النص */
+    color: #34495e;
+}
+
+/* تحسين عرض الهاتف في الـ CSS */
+.phone-frame {
+    position: relative;
+    width: 100%; /* تغيير العرض ليتناسب مع الشاشات الصغيرة */
+    max-width: 360px; /* تحديد الحد الأقصى للعرض */
+    height: auto;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    margin: auto;
+}
+
+.phone-frame .content {
+    padding: 20px;
+}
+
+.phone-frame .screen {
+    background: #ecf0f1;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* تنسيق التفاصيل الشخصية */
+.personal-details {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.personal-details p {
+    font-size: 16px; /* تقليل الحجم ليتناسب مع الهاتف */
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* تنسيق العنوان للتفاصيل الشخصية */
+.personal-details h2 {
+    color: #2980b9;
+    font-size: 18px; /* تقليل الحجم */
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* قواعد الاستجابة (Responsive) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 22px;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .details p, .family p, .background-story p, .contact-info p {
+        font-size: 14px;
+    }
+
+    .final-message {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 12px 22px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1, h2 {
+        font-size: 18px; /* أصغر حجم للعناوين على الهواتف الصغيرة */
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .details p, .family p, .background-story p, .contact-info p {
+        font-size: 12px; /* تصغير النصوص بشكل أكبر */
+    }
+
+    .final-message {
+        font-size: 16px;
+    }
+}

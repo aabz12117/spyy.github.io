@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مهمة اختراق</title>
+    <link rel="stylesheet" href="mission_styles.css">
+</head>
+<body>
+    <!-- إطار الهاتف -->
+    <div class="phone-container">
+        <div class="content">
+            <h2>أدخل كلمة المرور</h2>
+            <p>الرجاء إدخال كلمة المرور المؤلفة من 4 أرقام.</p>
+
+            <!-- عرض كلمة المرور المدخلة -->
+            <div class="password-display" id="passwordDisplay">
+                <span id="passwordField">_ _ _ _</span>
+            </div>
+
+            <!-- لوحة مفاتيح الأرقام -->
+            <div class="keypad">
+                <button class="key" onclick="enterNumber(1)">1</button>
+                <button class="key" onclick="enterNumber(2)">2</button>
+                <button class="key" onclick="enterNumber(3)">3</button>
+                <button class="key" onclick="enterNumber(4)">4</button>
+                <button class="key" onclick="enterNumber(5)">5</button>
+                <button class="key" onclick="enterNumber(6)">6</button>
+                <button class="key" onclick="enterNumber(7)">7</button>
+                <button class="key" onclick="enterNumber(8)">8</button>
+                <button class="key" onclick="enterNumber(9)">9</button>
+                <button class="key" onclick="clearPassword()">مسح</button>
+                <button class="key" onclick="enterNumber(0)">0</button>  <!-- صفر أسفل 8 -->
+            </div>
+
+            <button id="submitPassword" class="submit-button">إدخال</button>
+        </div>
+    </div>
+
+    <!-- النافذة المنبثقة عند الخطأ -->
+    <div id="errorPopup" class="error-popup">
+        <p>كلمة المرور خاطئة!</p>
+        <button id="closePopup" class="close-popup">إغلاق</button>
+    </div>
+
+    <script>
+        let password = '';  // تخزين كلمة المرور المدخلة
+
+        // إضافة الرقم إلى كلمة المرور المدخلة
+        function enterNumber(number) {
+            if (password.length < 4) {
+                password += number;
+                document.getElementById('passwordField').textContent = password.padEnd(4, ' _');
+            }
+        }
+
+        // مسح آخر رقم تم إدخاله
+        function clearPassword() {
+            password = password.slice(0, -1);  // إزالة آخر رقم
+            document.getElementById('passwordField').textContent = password.padEnd(4, ' _');
+        }
+
+        // عند الضغط على زر "إدخال" للتحقق من كلمة المرور
+        const submitButton = document.getElementById("submitPassword");
+        submitButton.addEventListener("click", function() {
+            if (password === "3333") {
+                window.location.href = "hack_success.html";  // الانتقال إلى صفحة النجاح
+            } else {
+                document.getElementById("errorPopup").style.display = "block";  // عرض النافذة المنبثقة في حالة كلمة مرور خاطئة
+            }
+        });
+
+        // إغلاق النافذة المنبثقة عند الضغط على "إغلاق"
+        document.getElementById("closePopup").addEventListener("click", function() {
+            document.getElementById("errorPopup").style.display = "none";
+        });
+    </script>
+</body>
+</html>

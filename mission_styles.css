@@ -1,0 +1,113 @@
+/* تصاميم CSS العامة */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4e1f4;  /* خلفية وردية فاتحة */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* تصميم إطار الهاتف */
+.phone-container {
+    width: 330px;  /* تصغير حجم الهاتف */
+    height: 600px; /* تصغير ارتفاع الهاتف */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* تصميم عرض كلمة المرور المدخلة */
+.password-display {
+    margin: 20px 0;
+}
+
+#passwordField {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+/* لوحة مفاتيح الأرقام */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.key {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.5em;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.key:hover {
+    background-color: #f0f0f0;
+}
+
+.key:active {
+    background-color: #d3d3d3;
+}
+
+/* زر "إدخال" */
+.submit-button {
+    background-color: #ff5f5f;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #ff3838;
+}
+
+/* تصميم النافذة المنبثقة عند الخطأ */
+.error-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.error-popup p {
+    color: red;
+    font-size: 1.2em;
+}
+
+.close-popup {
+    background-color: #ff5f5f;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-popup:hover {
+    background-color: #ff3838;
+}
